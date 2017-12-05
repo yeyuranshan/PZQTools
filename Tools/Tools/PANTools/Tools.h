@@ -29,4 +29,5 @@
  */
 + (BOOL)isIdNum:(NSString *)candidate;
 
+
 @end

@@ -18,6 +18,7 @@
 		2C1530DD1FB6D7E600E69ED4 /* MD5Encrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1530D61FB6D7E600E69ED4 /* MD5Encrypt.m */; };
 		2C1530DE1FB6D7E600E69ED4 /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1530D81FB6D7E600E69ED4 /* Tools.m */; };
 		2C1530DF1FB6D7E600E69ED4 /* TypeUsageMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1530DA1FB6D7E600E69ED4 /* TypeUsageMethod.m */; };
+		2CDB47761FD6A706008DF24D /* ToolsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDB47751FD6A706008DF24D /* ToolsView.m */; };
 		5FC7EB1526704E93906FD31B /* libPods-Tools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF08C34758F6EC182E8B1C6D /* libPods-Tools.a */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,8 @@
 		2C1530D81FB6D7E600E69ED4 /* Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tools.m; sourceTree = "<group>"; };
 		2C1530D91FB6D7E600E69ED4 /* TypeUsageMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeUsageMethod.h; sourceTree = "<group>"; };
 		2C1530DA1FB6D7E600E69ED4 /* TypeUsageMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypeUsageMethod.m; sourceTree = "<group>"; };
+		2CDB47741FD6A706008DF24D /* ToolsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToolsView.h; sourceTree = "<group>"; };
+		2CDB47751FD6A706008DF24D /* ToolsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToolsView.m; sourceTree = "<group>"; };
 		EF08C34758F6EC182E8B1C6D /* libPods-Tools.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tools.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F27332CCC4EAA93738136C6C /* Pods-Tools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tools.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tools/Pods-Tools.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,6 +161,8 @@
 				2C1530D81FB6D7E600E69ED4 /* Tools.m */,
 				2C1530D91FB6D7E600E69ED4 /* TypeUsageMethod.h */,
 				2C1530DA1FB6D7E600E69ED4 /* TypeUsageMethod.m */,
+				2CDB47741FD6A706008DF24D /* ToolsView.h */,
+				2CDB47751FD6A706008DF24D /* ToolsView.m */,
 			);
 			path = PANTools;
 			sourceTree = "<group>";
@@ -372,6 +377,7 @@
 				2C1530B21FB6D77C00E69ED4 /* main.m in Sources */,
 				2C1530DD1FB6D7E600E69ED4 /* MD5Encrypt.m in Sources */,
 				2C1530A41FB6D77C00E69ED4 /* AppDelegate.m in Sources */,
+				2CDB47761FD6A706008DF24D /* ToolsView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
