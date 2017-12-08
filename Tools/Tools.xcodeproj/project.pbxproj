@@ -18,6 +18,8 @@
 		2C1530DD1FB6D7E600E69ED4 /* MD5Encrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1530D61FB6D7E600E69ED4 /* MD5Encrypt.m */; };
 		2C1530DE1FB6D7E600E69ED4 /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1530D81FB6D7E600E69ED4 /* Tools.m */; };
 		2C1530DF1FB6D7E600E69ED4 /* TypeUsageMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1530DA1FB6D7E600E69ED4 /* TypeUsageMethod.m */; };
+		2CB40F221FDA8938002CBDE6 /* SingleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB40F211FDA8938002CBDE6 /* SingleManager.m */; };
+		2CB40F281FDA8BC4002CBDE6 /* UIView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB40F271FDA8BC4002CBDE6 /* UIView+Category.m */; };
 		2CDB47761FD6A706008DF24D /* ToolsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDB47751FD6A706008DF24D /* ToolsView.m */; };
 		5FC7EB1526704E93906FD31B /* libPods-Tools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF08C34758F6EC182E8B1C6D /* libPods-Tools.a */; };
 /* End PBXBuildFile section */
@@ -63,6 +65,10 @@
 		2C1530D81FB6D7E600E69ED4 /* Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tools.m; sourceTree = "<group>"; };
 		2C1530D91FB6D7E600E69ED4 /* TypeUsageMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeUsageMethod.h; sourceTree = "<group>"; };
 		2C1530DA1FB6D7E600E69ED4 /* TypeUsageMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypeUsageMethod.m; sourceTree = "<group>"; };
+		2CB40F201FDA855C002CBDE6 /* UIColor+Color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Color.h"; sourceTree = "<group>"; };
+		2CB40F211FDA8938002CBDE6 /* SingleManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingleManager.m; sourceTree = "<group>"; };
+		2CB40F261FDA8BC3002CBDE6 /* UIView+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Category.h"; sourceTree = "<group>"; };
+		2CB40F271FDA8BC4002CBDE6 /* UIView+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Category.m"; sourceTree = "<group>"; };
 		2CDB47741FD6A706008DF24D /* ToolsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToolsView.h; sourceTree = "<group>"; };
 		2CDB47751FD6A706008DF24D /* ToolsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToolsView.m; sourceTree = "<group>"; };
 		EF08C34758F6EC182E8B1C6D /* libPods-Tools.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tools.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,16 +126,9 @@
 		2C1530A11FB6D77C00E69ED4 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				2C1530D41FB6D7E600E69ED4 /* PANTools */,
-				2C1530A21FB6D77C00E69ED4 /* AppDelegate.h */,
-				2C1530A31FB6D77C00E69ED4 /* AppDelegate.m */,
-				2C1530A51FB6D77C00E69ED4 /* ViewController.h */,
-				2C1530A61FB6D77C00E69ED4 /* ViewController.m */,
-				2C1530A81FB6D77C00E69ED4 /* Main.storyboard */,
-				2C1530AB1FB6D77C00E69ED4 /* Assets.xcassets */,
-				2C1530AD1FB6D77C00E69ED4 /* LaunchScreen.storyboard */,
 				2C1530B01FB6D77C00E69ED4 /* Info.plist */,
-				2C1530B11FB6D77C00E69ED4 /* main.m */,
+				2CB40F1F1FDA84F8002CBDE6 /* Appdelegate */,
+				2C1530D41FB6D7E600E69ED4 /* PANTools */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -155,16 +154,51 @@
 		2C1530D41FB6D7E600E69ED4 /* PANTools */ = {
 			isa = PBXGroup;
 			children = (
+				2CB40F1E1FDA84E1002CBDE6 /* ViewTools */,
+				2CB40F1C1FDA84A6002CBDE6 /* BaseTools */,
 				2C1530D51FB6D7E600E69ED4 /* MD5Encrypt.h */,
 				2C1530D61FB6D7E600E69ED4 /* MD5Encrypt.m */,
-				2C1530D71FB6D7E600E69ED4 /* Tools.h */,
-				2C1530D81FB6D7E600E69ED4 /* Tools.m */,
 				2C1530D91FB6D7E600E69ED4 /* TypeUsageMethod.h */,
 				2C1530DA1FB6D7E600E69ED4 /* TypeUsageMethod.m */,
-				2CDB47741FD6A706008DF24D /* ToolsView.h */,
-				2CDB47751FD6A706008DF24D /* ToolsView.m */,
 			);
 			path = PANTools;
+			sourceTree = "<group>";
+		};
+		2CB40F1C1FDA84A6002CBDE6 /* BaseTools */ = {
+			isa = PBXGroup;
+			children = (
+				2C1530D81FB6D7E600E69ED4 /* Tools.m */,
+				2C1530D71FB6D7E600E69ED4 /* Tools.h */,
+				2CB40F201FDA855C002CBDE6 /* UIColor+Color.h */,
+				2CB40F211FDA8938002CBDE6 /* SingleManager.m */,
+			);
+			path = BaseTools;
+			sourceTree = "<group>";
+		};
+		2CB40F1E1FDA84E1002CBDE6 /* ViewTools */ = {
+			isa = PBXGroup;
+			children = (
+				2CDB47741FD6A706008DF24D /* ToolsView.h */,
+				2CDB47751FD6A706008DF24D /* ToolsView.m */,
+				2CB40F261FDA8BC3002CBDE6 /* UIView+Category.h */,
+				2CB40F271FDA8BC4002CBDE6 /* UIView+Category.m */,
+			);
+			path = ViewTools;
+			sourceTree = "<group>";
+		};
+		2CB40F1F1FDA84F8002CBDE6 /* Appdelegate */ = {
+			isa = PBXGroup;
+			children = (
+				2C1530B11FB6D77C00E69ED4 /* main.m */,
+				2C1530A81FB6D77C00E69ED4 /* Main.storyboard */,
+				2C1530A21FB6D77C00E69ED4 /* AppDelegate.h */,
+				2C1530AB1FB6D77C00E69ED4 /* Assets.xcassets */,
+				2C1530A31FB6D77C00E69ED4 /* AppDelegate.m */,
+				2C1530A51FB6D77C00E69ED4 /* ViewController.h */,
+				2C1530A61FB6D77C00E69ED4 /* ViewController.m */,
+				2C1530AD1FB6D77C00E69ED4 /* LaunchScreen.storyboard */,
+			);
+			path = Appdelegate;
 			sourceTree = "<group>";
 		};
 		5A29C2A12424C277FBB93D31 /* Pods */ = {
@@ -372,12 +406,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C1530DF1FB6D7E600E69ED4 /* TypeUsageMethod.m in Sources */,
+				2CB40F281FDA8BC4002CBDE6 /* UIView+Category.m in Sources */,
 				2C1530A71FB6D77C00E69ED4 /* ViewController.m in Sources */,
 				2C1530DE1FB6D7E600E69ED4 /* Tools.m in Sources */,
 				2C1530B21FB6D77C00E69ED4 /* main.m in Sources */,
 				2C1530DD1FB6D7E600E69ED4 /* MD5Encrypt.m in Sources */,
 				2C1530A41FB6D77C00E69ED4 /* AppDelegate.m in Sources */,
 				2CDB47761FD6A706008DF24D /* ToolsView.m in Sources */,
+				2CB40F221FDA8938002CBDE6 /* SingleManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
