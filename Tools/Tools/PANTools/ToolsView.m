@@ -181,4 +181,62 @@
     
     return finalImage;
 }
+/**
+ 设置label文字号码显示为蓝色
+ */
+- (void)matchingPhoneNumber:(UILabel *)label color:(UIColor *)labelColor{
+    NSString *contentStr = label.text;
+    if (!contentStr) {
+        return;
+    }
+    //获取字符串中的电话号码
+    NSString *regulaStr = @"\\d{3,4}[- ]?\\d{7,8}";
+    NSRange stringRange = NSMakeRange(0, contentStr.length);
+    //正则匹配
+    NSError *error;
+    NSRegularExpression *regexps = [NSRegularExpression regularExpressionWithPattern:regulaStr options:0 error:&error];
+    
+    if (!error && regexps != nil)
+    {
+        [regexps enumerateMatchesInString:contentStr
+                                  options:0 range:stringRange
+                               usingBlock:^(NSTextCheckingResult * _Nullable result, NSMatchingFlags flags, BOOL * _Nonnull stop) {
+                                   
+                                   NSRange phoneRange = result.range;
+                                   NSString *iphoneStr = [contentStr substringWithRange:phoneRange];
+                                   BOOL isPhone = [ToolsView isTelephone:iphoneStr];
+                                   //设置文本中的电话号码显示为蓝色
+                                   NSMutableAttributedString *str = [[NSMutableAttributedString alloc]initWithString:contentStr];
+                                   
+                                   if (isPhone)
+                                   {
+                                       [str addAttribute:NSForegroundColorAttributeName value:labelColor range:phoneRange];
+                                   }
+                                   
+                                   label.attributedText = str;
+                                   
+                               }];
+    }
+}
+
++ (BOOL)isTelephone:(NSString*)candidate
+{
+    NSString * MOBILE = @"^1(3[0-9]|5[0-35-9]|8[025-9])\\d{8}$";
+    NSString * CM = @"^1(34[0-8]|(3[5-9]|5[017-9]|8[278])\\d)\\d{7}$";
+    NSString * CU = @"^1(3[0-2]|5[256]|8[56])\\d{8}$";
+    NSString * CT = @"^1((33|53|8[09])[0-9]|349)\\d{7}$";
+    NSString * PHS = @"^0(10|2[0-5789]|\\d{3})\\d{7,8}$";
+    NSPredicate *regextestmobile = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", MOBILE];
+    NSPredicate *regextestcm = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CM];
+    NSPredicate *regextestcu = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CU];
+    NSPredicate *regextestct = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CT];
+    NSPredicate *regextestphs = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", PHS];
+    
+    return  [regextestmobile evaluateWithObject:candidate]   ||
+    [regextestphs evaluateWithObject:candidate]      ||
+    [regextestct evaluateWithObject:candidate]       ||
+    [regextestcu evaluateWithObject:candidate]       ||
+    [regextestcm evaluateWithObject:candidate];
+}
+
 @end
