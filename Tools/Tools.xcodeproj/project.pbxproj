@@ -169,8 +169,6 @@
 			children = (
 				2C1530D81FB6D7E600E69ED4 /* Tools.m */,
 				2C1530D71FB6D7E600E69ED4 /* Tools.h */,
-				2CB40F201FDA855C002CBDE6 /* UIColor+Color.h */,
-				2CB40F211FDA8938002CBDE6 /* SingleManager.m */,
 			);
 			path = BaseTools;
 			sourceTree = "<group>";
@@ -182,6 +180,8 @@
 				2CDB47751FD6A706008DF24D /* ToolsView.m */,
 				2CB40F261FDA8BC3002CBDE6 /* UIView+Category.h */,
 				2CB40F271FDA8BC4002CBDE6 /* UIView+Category.m */,
+				2CB40F211FDA8938002CBDE6 /* SingleManager.m */,
+				2CB40F201FDA855C002CBDE6 /* UIColor+Color.h */,
 			);
 			path = ViewTools;
 			sourceTree = "<group>";
