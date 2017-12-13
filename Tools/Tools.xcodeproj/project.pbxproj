@@ -167,8 +167,8 @@
 		2CB40F1C1FDA84A6002CBDE6 /* BaseTools */ = {
 			isa = PBXGroup;
 			children = (
-				2C1530D81FB6D7E600E69ED4 /* Tools.m */,
 				2C1530D71FB6D7E600E69ED4 /* Tools.h */,
+				2C1530D81FB6D7E600E69ED4 /* Tools.m */,
 			);
 			path = BaseTools;
 			sourceTree = "<group>";

@@ -88,7 +88,8 @@
     }
     
     //找出余数对应的元素
-    NSString *str = idCardModArray[(idCardWithCofficientSum % 11)];
+    NSInteger count = idCardWithCofficientSum%11;
+    NSString *str = [idCardModArray objectAtIndex:count];
     //    //获取最后一位身份证号码
     NSString *idCardLast = [candidate substringWithRange:NSMakeRange(17, 1)];
     // 如果这个数字和身份证最后一位相同,则符合国家标准,返回YES

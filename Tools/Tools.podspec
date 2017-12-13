@@ -12,12 +12,13 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/yeyuranshan/PZQTools"
   
 
-  s.license      = "MIT"
-
+ #s.license      = 'MIT'
+  s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author             = { "yeyuranshan" => "609004893@qq.com" }
 
   s.source       = { :git => "https://github.com/yeyuranshan/PZQTools.git", :tag => "1.0.0" }
 
-  s.source_files  = "Tools/PANTools/BaseTools/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
+
+  s.source_files  = 'Tools/PANTools/BaseTools/*.{h,m}'
+  #s.exclude_files = "Classes/Exclude"
 end
